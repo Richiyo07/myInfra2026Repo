@@ -18,7 +18,7 @@ resource "aws_security_group" "sonar_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["3.15.216.238"] # Replace with your public IP
+    cidr_blocks = ["0.0.0.0/0"] # Replace with your public IP
   }
 
   ingress {
