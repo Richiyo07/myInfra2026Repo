@@ -29,3 +29,11 @@ resource "aws_security_group" "sonar_sg" {
     Name = "sonar-sg"
   }
 }
+
+resource "aws_eip" "mySonarInstance" {
+  vpc      = true
+  instance = aws_instance.mySonarInstance.id
+tags= {
+    Name = "sonar_elastic_ip"
+  }
+}
